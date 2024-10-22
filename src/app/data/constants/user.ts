@@ -38,3 +38,5 @@ const user: User[] = [
     password: "senha123"
   },
 ]
+
+export default user

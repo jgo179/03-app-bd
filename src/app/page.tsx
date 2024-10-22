@@ -1,7 +1,7 @@
-import Page from "./components/template/Page";
+import Pagina from "./components/template/Pagina";
 
 export default function Home() {
   return (
-    <Page>opa</Page>
+    <Pagina>opa</Pagina>
   );
 }
