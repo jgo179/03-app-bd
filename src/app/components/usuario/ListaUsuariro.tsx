@@ -1,12 +1,16 @@
 import type { User } from '@/core/model/usuario'
-import user from '../../data/constants/user'
 import LinhaUsuario from './LinhaUsuario'
 
-export default function ListaUsuario() {
+export interface ListaUsuarioProps {
+  usuarios: User[]
+  onClick?: (usuario: User) => void
+}
+
+export default function ListaUsuario(props: ListaUsuarioProps) {
   return (
     <div className="flex flex-col gap-4">
-      {user.map((user: User) => {
-        return <LinhaUsuario key={user.id} usuario={user} />
+      {props.usuarios.map((user: User) => {
+        return <LinhaUsuario key={user.id} usuario={user} onClick={props.onClick} />
       })}
     </div>
   )
